@@ -4,6 +4,8 @@ The datasets and source code of Facilitating Signed Network Sketching with Simpl
 The steps of running the experiments:
 
 Link Sign Prediction
+
 '''
 python main.py
+
 '''
