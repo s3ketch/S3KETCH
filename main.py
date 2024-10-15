@@ -90,7 +90,7 @@ if __name__ == "__main__":
                     if category == 1:
                         pos_out_degree[source_index] += 1
                         pos_in_degree[target_index] += 1
-                    elif category == -1:
+                    elif category == 0:
                         neg_out_degree[source_index] += 1
                         neg_in_degree[target_index] += 1
                     classes.append(category)
