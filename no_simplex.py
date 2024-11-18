@@ -93,7 +93,7 @@ if __name__ == "__main__":
             if category == 1:
                 pos_out_degree[source_index] += 1
                 pos_in_degree[target_index] += 1
-            elif category == -1:
+            else:
                 neg_out_degree[source_index] += 1
                 neg_in_degree[target_index] += 1
             classes.append(category)
@@ -133,8 +133,8 @@ if __name__ == "__main__":
                             if edge_index_vw is None:
                                 edge_index_vw = edges_index.get((w, v), None)
                                 if edge_index_vw is None:
-                                    continue  # 跳过当前循环迭代
-                            # 如果所有边都在字典中，添加到列表中
+                                    continue 
+                           
                             B2_row.extend([edge_index_uv, edge_index_uw, edge_index_vw])
                         
                             B2_column.extend([triangle_num,triangle_num,triangle_num])
@@ -182,7 +182,7 @@ if __name__ == "__main__":
 
         
             
-                # 保存结果
+              
         train_X, test_X, train_Y, test_Y = train_test_split(conta, classes, test_size=0.2)
         clf = LogisticRegression()
         clf.fit(train_X, train_Y)
